@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Servletproject</display-name>
+	
+	<servlet>
+		<servlet-name>Hello</servlet-name>
+		<servlet-class>com.test.HelloController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Hello</servlet-name>
+		<url-pattern>/Hello</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ServletEx01</servlet-name>
+		<servlet-class>com.ashspell.servlet.ex.ServletEx01Controller</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ServletEx01</servlet-name>
+		<url-pattern>/Servlet/ex01</url-pattern>	
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Test01</servlet-name>
+		<servlet-class>com.ashspell.servlet.test.ServletTest01Controller</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Test01</servlet-name>
+		<url-pattern>/servlet/test01</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Test02</servlet-name>
+		<servlet-class>com.ashspell.servlet.test.ServletTest02Controller</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Test02</servlet-name>
+		<url-pattern>/servlet/test02</url-pattern>
+	</servlet-mapping>
+</web-app>
