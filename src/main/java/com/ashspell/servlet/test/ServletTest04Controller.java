@@ -2,6 +2,8 @@ package com.ashspell.servlet.test;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,5 +29,7 @@ public class ServletTest04Controller extends HttpServlet {
 		
 		out.println("</ul>");
 		out.println("</body></html>");
+		
+		List<String> animals = new ArrayList<>();
 	}
 }
