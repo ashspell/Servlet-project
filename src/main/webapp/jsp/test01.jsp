@@ -55,7 +55,7 @@
 	<%
 	String birthDay = "20010820";
 	
-	String birthString = birthDay.subString(0,4);
+	String birthString = birthDay.substring(0,4);
 	
 	int year = Integer.parseInt(birthString);
 	int age = 2022 - year + 1;
