@@ -30,7 +30,7 @@
     list.add(map);
 	
     
-    	String menu = request.getParameter("search");
+    	String search = request.getParameter("search");
     	
     
 	%>
@@ -45,7 +45,7 @@
 		</thead>
 		<tbody>
 			<% for(Map<String, Object> store : list) {%>
-				<% if (store.get("menu").equals(menu)) {%>
+				<% if (store.get("menu").equals(search)) {%>
 			<tr>
 				<td><%= store.get("menu") %></td>
 				<td><%= store.get("name") %></td>
