@@ -35,17 +35,17 @@ public class Test01 extends HttpServlet {
 		
 		try {
 			while(resultset.next()) {
-				String address = resultset.getString("address");
-				int area = resultset.getInt("area");
-				String type = resultset.getString("type");
 				
-				out.println("매물 주소 : " + address);
-				out.println("면적 : " + area);
-				out.println("타입 : " + type);
+				
+				out.println("매물 주소 : " + resultset.getString("address"));
+				out.println("면적 : " + resultset.getInt("area"));
+				out.println("타입 : " + resultset.getString("type"));
 			}
 		} catch (SQLException e) {
 			
 			e.printStackTrace();
 		}
+		
+		mysqlService.disconnect();
 	}
 }

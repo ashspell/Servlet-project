@@ -10,7 +10,7 @@ public class MysqlService {
 	
 	private static MysqlService mysqlService = null;
 	
-	private final String url = "jdbc:mysql://localhost:3306.testdb";
+	private final String url = "jdbc:mysql://localhost:3306/testdb";
 	private final String id = "root";
 	private final String password = "root";
 	
@@ -35,8 +35,8 @@ public class MysqlService {
 	public void connect() {
 		try {
 			DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-			Connection connection =  DriverManager.getConnection(url, id, password);
-			Statement statement = connection.createStatement();
+			this.connection  =  DriverManager.getConnection(url, id, password);
+			this.statement  = connection.createStatement();
 			
 			
 			
@@ -50,8 +50,8 @@ public class MysqlService {
 	// 접속 끊기
 	public void disconnect() {
 		try {
-			statement.close();
-			connection.close();
+			this.statement.close();
+			this.connection.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -61,25 +61,27 @@ public class MysqlService {
 	// select 쿼리 수행기능
 	public ResultSet select(String query) {
 		try {
-			this.statement.executeQuery(query);
+			return this.statement.executeQuery(query);
 		} catch (SQLException e) {
 			
 			e.printStackTrace();
-			
+		
+			return null;
 		}
-		return null;
+		
 	}
 	
 	
 	// insert, update, delete 쿼리 수행기능
 	public int update(String query) {
 		try {
-			this.statement.executeUpdate(query);
+			return this.statement.executeUpdate(query);
 		} catch (SQLException e) {
 			
 			e.printStackTrace();
-			
+		
+			return -1;
 		}
-		return -1;
+		
 	}
 }
