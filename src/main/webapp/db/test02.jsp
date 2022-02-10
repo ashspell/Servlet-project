@@ -7,20 +7,27 @@
 <title>즐겨찾기 목록</title>
 </head>
 <body>
-<form method = "post">
 
-	<table>
+
+
+
+
+
+<div class = "container">
+	<table class = "table text-center">
 		<thead>
 			<tr>
 				<th>이름(name)</th>
 				<th>주소(url)</th>
 			</tr>
 		</thead>
-		
-	
-	
+		<tbody>
+			<tr>
+				<td></td>
+				<td><a href =""></a></td>
+			</tr>
+		</tbody>
 	</table>
-	
-</form>
+</div>
 </body>
 </html>
