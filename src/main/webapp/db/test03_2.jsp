@@ -52,9 +52,9 @@
 	<section>
 	<div  id = "wrap" >
 		<select id = "selbox" name = "selbox">
-			<option>-아이디 선택-</option>
+			<option value ="0">-아이디 선택-</option>
 			<% while(resultSet.next()) { %>
-			<option><%= resultSet.getString("nickname") %></option>
+			<option value = "<%= resultSet.getInt("id") %>"><%= resultSet.getString("nickname") %></option>
 			<% } %>
 		</select>
 		<input type ="text" id = "text">
